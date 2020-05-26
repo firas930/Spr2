@@ -1,0 +1,177 @@
+﻿<Window x:Class="Spr2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Spr2"
+        mc:Ignorable="d"
+        Title="Profilberechner" Height="450" Width="800" Background="#FFFFFDFD" ResizeMode="NoResize" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+    <Grid Margin="0,10,3.6,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="67"/>
+            <RowDefinition Height="19"/>
+            <RowDefinition Height="38*"/>
+            <RowDefinition Height="111*"/>
+            <RowDefinition Height="185*"/>
+
+
+        </Grid.RowDefinitions>
+
+        <StackPanel x:Name="ausgabe1" HorizontalAlignment="Right" VerticalAlignment="Top"  Width="220" Height="233" Margin="0,26.8,10,0" Grid.Row="3" Grid.RowSpan="2">
+            <Label Content="Volume:" Target="{Binding ElementName=txtvolume}" />
+            <TextBox x:Name="txtvolume" />
+            <Label Content="FTM X:" Target="{Binding ElementName=txtFTM_X}"/>
+            <TextBox x:Name="txtFTM_X"/>
+            <Label Content="FTM Y:" Target="{Binding ElementName=txtFTM_Y}"/>
+            <TextBox x:Name="txtFTM_Y" />
+            <Label Content="masse:" Target="{Binding ElementName=txtmasse}"/>
+            <TextBox x:Name="txtmasse"/>
+            <Label Content="schwerpunkt_x:" Target="{Binding ElementName=txtschwerpunkt_x}"/>
+            <TextBox x:Name="txtschwerpunkt_x"/>
+
+
+        </StackPanel>
+
+
+
+        <Grid x:Name="Material" Margin="10,10,533,10.59" Grid.RowSpan="5">
+            <TreeView Margin="-10,0,91.4,223.61">
+                <TreeViewItem Header="Profil" IsExpanded="True" Height="357" Width="196">
+                    <TreeViewItem x:Name="RechteckProfil" Header="RechteckProfil" Selected="RechteckProfil_selected" />
+                    <TreeViewItem x:Name="RundProfil" Header="RundProfil" Selected="RundProfil_selected" />
+                    <TreeViewItem x:Name="viereckProfil" Header="ViereckProfil" Selected="viereckProfil_selected" />
+                    <TreeViewItem x:Name="DreieckProfil" Header="DreieckProfil" Selected="DreieckProfil_selected" />
+                    <TreeViewItem x:Name="OvalProfil" Header="OvalProfil" Selected="OvalProfil_selected" />
+
+                </TreeViewItem>
+            </TreeView>
+
+            <StackPanel Margin="0,183,67.4,-0.39">
+                <ComboBox  Height="33" Margin="0,0,24,0">
+                    <ComboBoxItem x:Name="Mstahl" Content="stahl"/>
+                    <ComboBoxItem x:Name="Mkupfer" IsSelected="True" Content="kupfer"/>
+                    <ComboBoxItem x:Name="Maluminium" Content="aluminium"/>
+                </ComboBox>
+            </StackPanel>
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
+        <Grid x:Name="rechteckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="348" Background="White">
+            <TextBox x:Name="txtlänge" HorizontalAlignment="Left" Height="23" Margin="190,149,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Länge" HorizontalAlignment="Left" Margin="133,149,0,0" VerticalAlignment="Top"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="316,149,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.481,0.695"/>
+            <TextBox x:Name="txtbreite" HorizontalAlignment="Left" Height="23" Margin="190,191,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Breite" HorizontalAlignment="Left" Margin="133,191,0,0" VerticalAlignment="Top"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="319,191,0,0" VerticalAlignment="Top"/>
+            <TextBox x:Name="txthöhe" HorizontalAlignment="Left" Height="23" Margin="190,234,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.267,0.948"/>
+            <Label Content="Höhe" HorizontalAlignment="Left" Margin="133,234,0,0" VerticalAlignment="Top"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="315,234,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="Buttonrechteckprofil" Content="Rechnen" HorizontalAlignment="Left" Margin="-116,266,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.717,0.625" Click="Button_Click" Background="#FFF90808"/>
+
+
+        </Grid>
+
+
+        <Grid x:Name="rundprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="348" Background="White" Visibility="Hidden">
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="179,269,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Länge" HorizontalAlignment="Left" Margin="116,266,0,0" VerticalAlignment="Top"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="308,266,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="179,220,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.497,5.417"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="308,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.042,0.508"/>
+            <Label Content="Durchmesser" HorizontalAlignment="Left" Margin="116,217,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.794,0.883" Width="83" Height="33">
+
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform X="-19.992"/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+            <Button x:Name="buttonrundprofil" Content="Rechnen" HorizontalAlignment="Left" Margin="-116,266,0,0" VerticalAlignment="Top" Width="75" Background="#FF9ED00E" RenderTransformOrigin="-0.195,0.5"/>
+
+        </Grid>
+
+
+
+
+
+
+        <Grid x:Name="viereckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="348" Background="White" Visibility="Hidden">
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="191,212,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="316,212,-2,0" VerticalAlignment="Top" RenderTransformOrigin="0.476,0.359"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="148,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.346,0.656"/>
+            <Button x:Name="buttonviereckprofil" Content="Rechnen" HorizontalAlignment="Left" Margin="-116,266,0,0" VerticalAlignment="Top" Width="75" Background="#FF3E4574"/>
+
+        </Grid>
+
+
+
+        <Grid x:Name="dreieckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="348" Background="White" Visibility="Hidden">
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="188,209,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Breite" HorizontalAlignment="Left" Margin="144,206,0,0" VerticalAlignment="Top"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="314,209,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.222,0.539"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="188,251,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Höhe" HorizontalAlignment="Left" Margin="144,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.208,0.477"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="309,251,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="buttondreieckprofil" Content="Rechnen" HorizontalAlignment="Left" Margin="-116,266,0,0" VerticalAlignment="Top" Width="75"/>
+
+        </Grid>
+
+
+
+        <Grid x:Name="ovalprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" Grid.RowSpan="5" VerticalAlignment="Top" Width="348" Visibility="Hidden" Background="White">
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="160,176,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Label Content="Durchmesser a" HorizontalAlignment="Left" Margin="55,176,0,0" VerticalAlignment="Top"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="285,176,0,0" VerticalAlignment="Top"/>
+            <TextBox HorizontalAlignment="Left" Height="23" Margin="160,218,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.5,0.496"/>
+            <Label Content="Durchmesser b" HorizontalAlignment="Left" Margin="53,218,0,0" VerticalAlignment="Top"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="295,218,0,0" VerticalAlignment="Top"/>
+            <Button x:Name="buttonovalprofil" Content="Rechnen" HorizontalAlignment="Left" Margin="-116,266,0,0" VerticalAlignment="Top" Width="75"/>
+
+
+        </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+
+
+
+
+
+
+
+
+</Window>
