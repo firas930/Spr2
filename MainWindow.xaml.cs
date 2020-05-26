@@ -118,7 +118,7 @@ namespace Spr2
         public double berechnungvolumen_rechteckprofil(double Länge, double Breite, double höhe)
         {
 
-            double Volumen_rechteckprofil = Länge * Breite * höhe;
+            double Volumen_rechteckprofil = Math.Round(Länge * Breite * höhe,3);
             return Volumen_rechteckprofil;
 
         }
