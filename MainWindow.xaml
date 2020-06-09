@@ -72,7 +72,7 @@
 
 
 
-        <Grid x:Name="rechteckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,10,0,0" VerticalAlignment="Top" Width="370" Visibility="Hidden">
+        <Grid x:Name="rechteckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,10,0,0" VerticalAlignment="Top" Width="370">
             <Grid.RowDefinitions>
                 <RowDefinition Height="227*"/>
                 <RowDefinition Height="152*"/>
@@ -91,7 +91,7 @@
             <TextBox x:Name="txtdichte_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,11.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
             <Label x:Name="dichte_reckteckprofil" Content="Dichte" HorizontalAlignment="Left" Margin="106,11.8,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.193,0.609" Grid.Row="1"/>
             <Label Content="Kg/m^3" HorizontalAlignment="Left" Margin="294,11.8,0,0" VerticalAlignment="Top" Grid.Row="1"/>
-            <Button Content="CATIA" Margin="-122,227,409,133.2" Grid.RowSpan="2"/>
+            <Button Content="CATIA" Margin="-122,227,409,133.2" Grid.RowSpan="2" Click="Button_Click_1"/>
         </Grid>
 
 
@@ -126,7 +126,7 @@
 
 
 
-        <Grid x:Name="viereckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" VerticalAlignment="Top" Width="348" Visibility="Visible">
+        <Grid x:Name="viereckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" VerticalAlignment="Top" Width="348" Visibility="Hidden">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="59*"/>
                 <ColumnDefinition Width="28*"/>
