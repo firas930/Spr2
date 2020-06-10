@@ -11,7 +11,7 @@ using System.Windows;
 
 namespace Spr2
 {
-    class Catia_ConnectionKreis
+    class Catia_ConnectionEllipse
     {
         INFITF.Application hsp_catiaApp;
         MECMOD.PartDocument hsp_catiaPart;
@@ -87,7 +87,7 @@ namespace Spr2
         public void setMittelpunkt(double r)
         {
             // Skizze umbenennen
-            hsp_catiaProfil.set_Name("Kreis");
+            hsp_catiaProfil.set_Name("Oval");
 
             // Rechteck in Skizze einzeichnen
             // Skizze oeffnen
@@ -97,7 +97,9 @@ namespace Spr2
             // erst die Punkte
 
 
-            Circle2D circle2D = catFactory2D1.CreateCircle(0, 0, r, 0, 0);
+            Ellipse2D Ellipse2D = catFactory2D1.CreateEllipse(0, 0, r, 0, 71, 800, 5, 500);
+
+
 
             // Skizzierer verlassen
             hsp_catiaProfil.CloseEdition();
@@ -109,7 +111,7 @@ namespace Spr2
 
 
 
-        public void ErzeugeBalkenkreis(double d)
+        public void ErzeugebalkenEllipse(double d)
         {
             // Hauptkoerper in Bearbeitung definieren
             hsp_catiaPart.Part.InWorkObject = hsp_catiaPart.Part.MainBody;
@@ -118,8 +120,10 @@ namespace Spr2
             ShapeFactory catShapeFactory1 = (ShapeFactory)hsp_catiaPart.Part.ShapeFactory;
             Pad catPad1 = catShapeFactory1.AddNewPad(hsp_catiaProfil, d);
 
+
             // Block umbenennen
             catPad1.set_Name("Stange");
+
 
             // Part aktualisieren
             hsp_catiaPart.Part.Update();

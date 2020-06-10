@@ -86,8 +86,12 @@
     <Compile Include="CatiaConnection.cs" />
     <Compile Include="CatiaControl.cs" />
     <Compile Include="CatiaControlDreieck.cs" />
+    <Compile Include="CatiaControlKreis.cs" />
+    <Compile Include="CatiaControlOval.cs" />
     <Compile Include="CatiaControlQuadrat.cs" />
     <Compile Include="Catia_ConnectionDreieck.cs" />
+    <Compile Include="Catia_ConnectionKreis.cs" />
+    <Compile Include="Catia_ConnectionOval.cs" />
     <Compile Include="Catia_ConnectionQuadrat.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

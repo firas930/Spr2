@@ -382,6 +382,8 @@ namespace Spr2
             txtFTM_Y.Text = (berechnungFTM_Y_ovalprofil(Durchmesser_a, Durchmesser_b) + "mm^4");
             txtmasse.Text = (berechnungmasse_ovalprofil(Durchmesser_a, Durchmesser_b, Dichte) + "g");
             txtschwerpunkt_x.Text = (berechgnungschwerpunkt_x_ovalprofil(Durchmesser_a) + "mm");
+            new CatiaControlEllipse();
+
         }
 
         private void Button_Click()
