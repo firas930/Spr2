@@ -37,7 +37,7 @@ namespace Spr2
                     Console.WriteLine("");
 
                     // Extrudiere Balken
-                    cc.ErzeugeBalken(300);
+                    cc.ErzeugeBalken(30);
                     Console.WriteLine("4");
                 }
                 else
