@@ -55,7 +55,9 @@
                 </TreeViewItem>
             </TreeView>
 
-            <StackPanel Margin="0,183,67.4,-0.39"/>
+            <StackPanel Margin="10,228,54.4,0">
+
+            </StackPanel>
 
 
         </Grid>
@@ -71,26 +73,30 @@
 
 
         <Grid x:Name="rechteckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,10,0,0" VerticalAlignment="Top" Width="370" Visibility="Hidden">
-            <TextBox x:Name="txtlänge_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,278,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="227*"/>
+                <RowDefinition Height="152*"/>
+            </Grid.RowDefinitions>
+            <TextBox x:Name="txtlänge_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,50.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
 
-            <Label Content="Länge" HorizontalAlignment="Left" Margin="104,278,0,0" VerticalAlignment="Top"/>
-            <Label Content="mm" HorizontalAlignment="Left" Margin="294,275,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.481,0.695"/>
-            <TextBox x:Name="txtbreite_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,316,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label Content="Breite" HorizontalAlignment="Left" Margin="106,318,0,0" VerticalAlignment="Top"/>
-            <Label Content="mm" HorizontalAlignment="Left" Margin="294,313,0,0" VerticalAlignment="Top"/>
-            <TextBox x:Name="txthöhe_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,356,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.267,0.948"/>
-            <Label Content="Höhe" HorizontalAlignment="Left" Margin="108,356,0,-3" VerticalAlignment="Top"/>
-            <Label Content="mm" HorizontalAlignment="Left" Margin="294,356,0,-3" VerticalAlignment="Top"/>
-            <Button x:Name="buttonrechteckprofil" Content="Rechnen" HorizontalAlignment="Left" Margin="-116,266,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.717,0.625" Background="#FFB0B0B0" Click="buttonrechteckprofil_Click_1"/>
-            <TextBox x:Name="txtdichte_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-            <Label x:Name="dichte_reckteckprofil" Content="Dichte" HorizontalAlignment="Left" Margin="106,239,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.193,0.609"/>
-            <Label Content="Kg/m^3" HorizontalAlignment="Left" Margin="294,239,0,0" VerticalAlignment="Top"/>
-
-
+            <Label Content="Länge" HorizontalAlignment="Left" Margin="104,50.8,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="294,47.8,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.481,0.695" Grid.Row="1"/>
+            <TextBox x:Name="txtbreite_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,88.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+            <Label Content="Breite" HorizontalAlignment="Left" Margin="106,90.8,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="294,85.8,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+            <TextBox x:Name="txthöhe_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,128.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.267,0.948" Grid.Row="1"/>
+            <Label Content="Höhe" HorizontalAlignment="Left" Margin="108,128.8,0,-3" VerticalAlignment="Top" Grid.Row="1"/>
+            <Label Content="mm" HorizontalAlignment="Left" Margin="294,128.8,0,-3" VerticalAlignment="Top" Grid.Row="1"/>
+            <Button x:Name="buttonrechteckprofil" Content="Rechnen" HorizontalAlignment="Left" Margin="-122,38.8,0,0" VerticalAlignment="Top" Width="83" RenderTransformOrigin="-0.717,0.625" Background="#FFB0B0B0" Click="buttonrechteckprofil_Click_1" Grid.Row="1"/>
+            <TextBox x:Name="txtdichte_rechteckprofil" HorizontalAlignment="Left" Height="23" Margin="160,11.8,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.Row="1"/>
+            <Label x:Name="dichte_reckteckprofil" Content="Dichte" HorizontalAlignment="Left" Margin="106,11.8,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.193,0.609" Grid.Row="1"/>
+            <Label Content="Kg/m^3" HorizontalAlignment="Left" Margin="294,11.8,0,0" VerticalAlignment="Top" Grid.Row="1"/>
+            <Button Content="CATIA" Margin="-122,227,409,133.2" Grid.RowSpan="2"/>
         </Grid>
 
 
-        <Grid x:Name="rundprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" VerticalAlignment="Top" Width="348" Visibility="Visible">
+
+        <Grid x:Name="rundprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" VerticalAlignment="Top" Width="348" Visibility="Hidden">
             <TextBox x:Name="txtLänge_rundprofil" HorizontalAlignment="Left" Height="23" Margin="160,278,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <Label Content="Länge" HorizontalAlignment="Left" Margin="103,316,0,0" VerticalAlignment="Top"/>
             <Label Content="mm" HorizontalAlignment="Left" Margin="289,313,0,0" VerticalAlignment="Top"/>
@@ -111,7 +117,7 @@
             <TextBox x:Name="txtdichte_rundprofil" HorizontalAlignment="Left" Height="23" Margin="160,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="dichte_rundprofil" Content="Dichte" HorizontalAlignment="Left" Margin="103,239,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.193,0.609"/>
             <Label Content="Kg/m^3" HorizontalAlignment="Left" Margin="290,239,0,0" VerticalAlignment="Top"/>
-            <Image HorizontalAlignment="Left" Height="144" Margin="134,10,0,0" VerticalAlignment="Top" Width="166" Source="Spr2/Kreis.PNG"/>
+            <Button Content="CATIA" Margin="-122,227,409,133.2" Grid.RowSpan="2"/>
 
         </Grid>
 
@@ -120,7 +126,7 @@
 
 
 
-        <Grid x:Name="viereckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" VerticalAlignment="Top" Width="348" Visibility="Hidden">
+        <Grid x:Name="viereckprofil_grid" HorizontalAlignment="Left" Height="379" Margin="175,22,0,0" VerticalAlignment="Top" Width="348" Visibility="Visible">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="59*"/>
                 <ColumnDefinition Width="28*"/>
@@ -132,6 +138,7 @@
             <TextBox x:Name="txtdichte_viereckprofil" HorizontalAlignment="Left" Height="23" Margin="160,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Grid.ColumnSpan="2"/>
             <Label x:Name="dichte_viereckprofil" Content="Dichte" HorizontalAlignment="Left" Margin="111,239,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.193,0.609"/>
             <Label Content="Kg/m^3" HorizontalAlignment="Left" Margin="49.4,239,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+            <Button Content="CATIA" Margin="-116,227,277,133"/>
 
 
         </Grid>
@@ -149,6 +156,8 @@
             <TextBox x:Name="txtdichte_dreieckprofil" HorizontalAlignment="Left" Height="23" Margin="160,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="dichte_dreieckckprofil" Content="Dichte" HorizontalAlignment="Left" Margin="103,239,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.193,0.609"/>
             <Label Content="kg/m^3" HorizontalAlignment="Left" Margin="294,239,0,0" VerticalAlignment="Top"/>
+            <Button Content="CATIA" Margin="-122,227,409,133.2" Grid.RowSpan="2"/>
+
 
 
 
@@ -166,6 +175,7 @@
             <TextBox x:Name="txtdichte_ovalprofil" HorizontalAlignment="Left" Height="23" Margin="160,239,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
             <Label x:Name="dichte_ovalprofil" Content="Dichte" HorizontalAlignment="Left" Margin="89,240,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.193,0.609"/>
             <Label Content="Kg/m^3" HorizontalAlignment="Left" Margin="285,235,0,0" VerticalAlignment="Top"/>
+            <Button Content="CATIA" Margin="-116,227,389,152"/>
 
 
 

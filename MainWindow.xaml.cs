@@ -160,7 +160,7 @@ namespace Spr2
             txtmasse.Text = (berechnungmasse_rundprofil(Durchmesser, Länge, Dichte) + "g");
             txtschwerpunkt_x.Text = (berechnungschwerpunkt_x_rundprofil(Durchmesser) + "mm");
 
-
+            
 
         }
         public double berechnungvolume_rundprofil(double Durchmesser, double Länge)
@@ -334,7 +334,7 @@ namespace Spr2
                 txtFTM_Y.Text = (berechnungFTM_Y_rechteckprofil(Breite, Höhe) + "mm^4");
                 txtmasse.Text = (berechnungmasse_rechteckprofil(Länge, Breite, Höhe, dichte) + "g");
                 txtschwerpunkt_x.Text = (berechgnungschwerpunkt_x_rechteckprofil(Länge, Breite, Höhe) + "mm");
-
+                new CatiaControl();
             }
             while (checkmate);
 
@@ -351,6 +351,7 @@ namespace Spr2
             txtFTM_Y.Text = (berechnungFTM_Y_viereckprofil(Länge) + "mm^4");
             txtmasse.Text = (berechnungmasse_viereckprofil(Länge, Dichte) + "g");
             txtschwerpunkt_x.Text = (berechgnungschwerpunkt_x_viereckprofil(Länge) + "mm");
+            new CatiaControlQuadrat();
 
         }
 
@@ -365,6 +366,8 @@ namespace Spr2
             txtFTM_Y.Text = (berechnungFTM_Y_dreieckprofil(Breite, Höhe) + "mm^4");
             txtmasse.Text = (berechnungmasse_dreieckprofil(Breite, Höhe, Dichte) + "g");
             txtschwerpunkt_x.Text = (berechnungschwerpunkt_x_dreieckprofil(Breite) + "mm");
+            new CatiaControlDreieck();
+
         }
 
         private void buttonovalprofil_Click(object sender, RoutedEventArgs e)
@@ -379,6 +382,11 @@ namespace Spr2
             txtFTM_Y.Text = (berechnungFTM_Y_ovalprofil(Durchmesser_a, Durchmesser_b) + "mm^4");
             txtmasse.Text = (berechnungmasse_ovalprofil(Durchmesser_a, Durchmesser_b, Dichte) + "g");
             txtschwerpunkt_x.Text = (berechgnungschwerpunkt_x_ovalprofil(Durchmesser_a) + "mm");
+        }
+
+        private void Button_Click()
+        {
+
         }
     }
 }
